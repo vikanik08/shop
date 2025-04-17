@@ -10,5 +10,46 @@ font-weight: Light;
 p{ font-family: 'CarlaSansLight'; }
 
 body {
-    height: 200vw;
+    height: auto;
 }
+
+.first-screen {
+    width: 100vw;
+    height: 50vw;
+}
+
+/* Контейнер с видео */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vw;
+    overflow: hidden;
+    z-index: -1; /* чтобы было за контентом */
+  }
+
+  /* Само видео */
+  .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  /* Контент поверх видео */
+  .content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 30vh;
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-shadow: 0 0 10px black;
+  }
